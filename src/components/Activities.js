@@ -1,8 +1,7 @@
 import React, {useState, useEffect} from 'react';
 const {REACT_APP_API_URL = 'https://fitnesstrac-kr.herokuapp.com/api'} = process.env.REACT_APP_API_URL;
 
-
-import FetchActivities from './FetchActivities.js';
+import RenderActivities from './RenderActivities.js';
 
 const Activities = (props) => {
 
@@ -18,7 +17,6 @@ const Activities = (props) => {
           }).then(response => response.json())
             .then(result => {
                 if(result) {
-                    console.log("This is the result", result);
                     setActivities(result);
                 }
           })
@@ -30,8 +28,8 @@ const Activities = (props) => {
     },[])
 
     return <>
-        <h3>Activities</h3>
-        <FetchActivities activities={activities} />
+        <h2>Activities List</h2>
+        <RenderActivities activities={activities} />
     </>
 
 }
