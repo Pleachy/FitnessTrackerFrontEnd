@@ -2,8 +2,10 @@ import React from 'react';
 
 const RenderSingleActivity = ({activity}) => {
     return <>
-    <h3>{activity.name}</h3>
-    <p>{activity.description}</p>
+    <h3>Activity Name: {activity.name}</h3>
+    <p>Description: {activity.description}</p>
+    <p>Count: {activity.count}</p>
+    <p>Duration: {activity.duration}</p>
     </>
 }
 

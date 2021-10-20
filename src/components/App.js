@@ -7,7 +7,8 @@ import {
     Activities,
     Register,
     Login,
-    Routines
+    Routines,
+    MyRoutines
 } from './';
 
 const App = () => {
@@ -46,6 +47,7 @@ const App = () => {
       <div id="navbar">
                 <Link to='/activities'>Activities </Link>
                 <Link to='/routines'>Routines</Link>
+                {token ? <Link to='/MyRoutines'>MyRoutines </Link> : null}
                 {!token ? <Link to='/register'>Register </Link> : null}
                 {!token ? <Link to='/login'>Login</Link> : null}
                 {token ? <button onClick={() => {
@@ -66,6 +68,9 @@ const App = () => {
       </Route>
       <Route exact path='/routines'>
         <Routines routines={routines}/>
+      </Route>
+      <Route exact path='/MyRoutines'>
+        <MyRoutines/>
       </Route>
     </div>
   </>

@@ -4,6 +4,7 @@ import RenderSingleRoutine from './RenderSingleRoutine.js';
 
 const Routines = (props) => {
     const {routines} = props;
+    const token = localStorage.getItem('Token');
 
     return <>
         <h3>Routines</h3>

@@ -13,5 +13,5 @@ const RenderActivities = (props) => {
     </>
 }
 
-//used in Activities.js to render all the activities
+//used in Activities.js and RenderSingleRoutine.js to render all the activities
 export default RenderActivities

@@ -2,10 +2,12 @@ import React, {useState, useEffect} from 'react';
 const {REACT_APP_API_URL = 'https://fitnesstrac-kr.herokuapp.com/api'} = process.env.REACT_APP_API_URL;
 
 import RenderActivities from './RenderActivities.js';
+import AddActivity from './AddActivity.js';
 
 const Activities = (props) => {
 
     const [activities, setActivities] = useState([]);
+    const localToken = localStorage.getItem('Token');
 
     console.log("Activities in Activities.js", activities)
 
@@ -29,6 +31,7 @@ const Activities = (props) => {
 
     return <>
         <h2>Activities List</h2>
+        {localToken ? <AddActivity/> : <p>(Resgister and Login to make your own activities!)</p>}
         <RenderActivities activities={activities} />
     </>
 
