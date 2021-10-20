@@ -4,8 +4,6 @@ const RenderSingleActivity = ({activity}) => {
     return <>
     <h3>Activity Name: {activity.name}</h3>
     <p>Description: {activity.description}</p>
-    <p>Count: {activity.count}</p>
-    <p>Duration: {activity.duration}</p>
     </>
 }
 

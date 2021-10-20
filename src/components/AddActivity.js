@@ -27,7 +27,6 @@ const AddActivity = () => {
                   if (result.error) {
                       alert(result.message)
                   }
-                  console.log(result);
                   setName('');
                   setDescription('');
               }).catch(console.error);
